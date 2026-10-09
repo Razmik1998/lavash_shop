@@ -1,0 +1,5 @@
+; Rendered into version.iss (gitignored) by packaging/scripts/build_windows.ps1,
+; substituting @VERSION@ from the repo-root VERSION file. FishShop.iss
+; `#include`s the generated version.iss - do not edit it directly, edit this
+; template or VERSION instead.
+#define MyAppVersion "@VERSION@"

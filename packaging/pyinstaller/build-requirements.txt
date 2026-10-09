@@ -1,0 +1,11 @@
+# Build-tool-only dependencies for freezing apps/admin and apps/pos into
+# Windows executables. Never added to either app's own requirements.txt /
+# pyproject.toml — these are not runtime dependencies of the shipped apps.
+#
+# Deliberately a minimum bound rather than an exact pin: PyInstaller support
+# for a given Python release lands in newer PyInstaller versions, so hard-
+# pinning an old PyInstaller is the thing most likely to break the build on a
+# newer interpreter. The supported interpreter range is enforced instead by
+# Resolve-BuildPython in packaging/scripts/build_windows.ps1.
+pyinstaller>=6.11
+pyinstaller-hooks-contrib>=2024.10

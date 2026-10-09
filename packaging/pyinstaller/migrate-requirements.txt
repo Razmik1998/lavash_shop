@@ -1,0 +1,12 @@
+# Dependency subset for building FishShopMigrate.exe (packaging/.build-venv-migrate).
+# Kept in sync with apps/admin/requirements.txt — these pins MUST match the
+# corresponding lines there exactly, since FishShopMigrate.exe runs Alembic
+# migrations against the same models/schema as FishShopAdmin.exe. argon2-cffi
+# is included because the seed-test-users command hashes passwords through
+# apps/admin/src/security.py, exactly as AuthService verifies them. No PySide6 —
+# the migration runner never touches the UI.
+SQLAlchemy==2.0.52
+psycopg[binary]==3.3.5
+alembic==1.19.2
+python-dotenv==1.2.3
+argon2-cffi==25.1.0

@@ -1,0 +1,11 @@
+# Pinned production dependencies for the Docker image.
+# Keep in sync with pyproject.toml's [project.dependencies]; this file
+# exists so the Docker build has a reproducible, non-editable install
+# without pulling in the dev/test extras.
+Django==5.2.17
+Pillow==12.3.0
+python-dotenv==1.2.3
+daphne==4.2.3
+channels==4.3.2
+channels_redis==4.3.0
+redis==5.3.1

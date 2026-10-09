@@ -1,0 +1,16 @@
+# Admin app dependencies. Install into the shared dev virtual environment
+# documented in README.md: pip install -r requirements.txt
+PySide6==6.11.2
+SQLAlchemy==2.0.52
+psycopg[binary]==3.3.5
+alembic==1.19.2
+argon2-cffi==25.1.0
+python-dotenv==1.2.3
+requests==2.32.3
+websocket-client==1.8.0
+
+# Dev/test tooling
+pytest==9.1.1
+pytest-qt==4.5.0
+ruff==0.16.6
+mypy==2.3.1

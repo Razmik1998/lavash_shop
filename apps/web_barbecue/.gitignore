@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+db.sqlite3
+media/
+.env
+.pytest_cache/
+*.egg-info/
+staticfiles/
+deploy/certs/*.pem
+deploy/certs/*.key
+deploy/certs/*.crt
+deploy/certbot-conf/
+deploy/certbot-webroot/

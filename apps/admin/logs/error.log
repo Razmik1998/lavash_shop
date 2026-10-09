@@ -1,0 +1,54 @@
+2026-10-08 02:46:05,924 ERROR networking.order_sync_client order_sync op=connect outcome=exhausted attempts=5
+2026-10-08 02:58:25,548 ERROR ui.workers background operation failed owner=ReportsWindow
+Traceback (most recent call last):
+  File "/Users/admin/Desktop/apps/shop_app/apps/admin/src/ui/workers.py", line 34, in run
+    result = self._fn()
+             ^^^^^^^^^^
+  File "/Users/admin/Desktop/apps/shop_app/apps/admin/src/ui/reports_window.py", line 275, in <lambda>
+    lambda: self._service.report(start, end),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/Desktop/apps/shop_app/apps/admin/src/services/reports.py", line 44, in report
+    raise ValueError("Ապագա օրերի համար փաստացի տվյալներ չկան։")
+ValueError: Ապագա օրերի համար փաստացի տվյալներ չկան։
+2026-10-09 01:04:34,854 CRITICAL __main__ startup failed
+Traceback (most recent call last):
+  File "/Users/admin/Desktop/apps/shop_app/apps/admin/src/main.py", line 58, in main
+    return _run()
+           ^^^^^^
+  File "/Users/admin/Desktop/apps/shop_app/apps/admin/src/main.py", line 93, in _run
+    sales_service = SalesService(
+                    ^^^^^^^^^^^^^
+TypeError: SalesService.__init__() takes from 4 to 6 positional arguments but 7 were given
+2026-10-09 01:04:34,855 CRITICAL logging_setup unhandled exception
+Traceback (most recent call last):
+  File "/Users/admin/Desktop/apps/shop_app/apps/admin/src/main.py", line 185, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Users/admin/Desktop/apps/shop_app/apps/admin/src/main.py", line 58, in main
+    return _run()
+           ^^^^^^
+  File "/Users/admin/Desktop/apps/shop_app/apps/admin/src/main.py", line 93, in _run
+    sales_service = SalesService(
+                    ^^^^^^^^^^^^^
+TypeError: SalesService.__init__() takes from 4 to 6 positional arguments but 7 were given
+2026-10-09 01:04:44,288 CRITICAL __main__ startup failed
+Traceback (most recent call last):
+  File "/Users/admin/Desktop/apps/shop_app/apps/admin/src/main.py", line 58, in main
+    return _run()
+           ^^^^^^
+  File "/Users/admin/Desktop/apps/shop_app/apps/admin/src/main.py", line 93, in _run
+    sales_service = SalesService(
+                    ^^^^^^^^^^^^^
+TypeError: SalesService.__init__() takes from 4 to 6 positional arguments but 7 were given
+2026-10-09 01:04:44,289 CRITICAL logging_setup unhandled exception
+Traceback (most recent call last):
+  File "/Users/admin/Desktop/apps/shop_app/apps/admin/src/main.py", line 185, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Users/admin/Desktop/apps/shop_app/apps/admin/src/main.py", line 58, in main
+    return _run()
+           ^^^^^^
+  File "/Users/admin/Desktop/apps/shop_app/apps/admin/src/main.py", line 93, in _run
+    sales_service = SalesService(
+                    ^^^^^^^^^^^^^
+TypeError: SalesService.__init__() takes from 4 to 6 positional arguments but 7 were given

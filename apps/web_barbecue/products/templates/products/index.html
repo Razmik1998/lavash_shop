@@ -1,0 +1,464 @@
+{% load static number_format %}
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Թարմ ձուկ և պրեմիում խորովածի ընտրանի՝ եփված իսկական կրակի վրա։">
+    <title>Ծովից Կրակ — Թարմ ձուկ և խորոված</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'products/index.css' %}">
+</head>
+<body>
+    <a class="skip-link" href="#main">Անցնել հիմնական բովանդակությանը</a>
+
+    <header class="site-header" id="site-header">
+        <div class="container site-header__inner">
+            <a class="brand" href="#top">
+                <span class="brand__mark" aria-hidden="true">🔥</span>
+                <span class="brand__name">Ծովից&nbsp;Կրակ</span>
+            </a>
+
+            <nav class="site-nav" aria-label="Հիմնական նավիգացիա">
+                <a href="#top">Գլխավոր</a>
+                <a href="#menu">Մենյու</a>
+                <a href="#trust">Մեր մասին</a>
+            </nav>
+
+            <a class="site-header__cta" href="#menu">Պատվիրել</a>
+
+            <button
+                class="nav-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="mobile-nav"
+                id="nav-toggle"
+            >
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+                <span class="nav-toggle__bar"></span>
+                <span class="sr-only">Բացել մենյուն</span>
+            </button>
+        </div>
+
+        <nav class="mobile-nav" id="mobile-nav" aria-label="Բջջային նավիգացիա" hidden>
+            <a class="mobile-nav__cta" href="#menu">Պատվիրել</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        {% if messages %}
+            <div class="site-messages">
+                {% for message in messages %}
+                    <p class="site-message site-message--{{ message.tags }}">{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <section class="hero" id="top">
+            <div class="hero__media" aria-hidden="true"></div>
+            <div class="container hero__content">
+                <p class="hero__eyebrow">Թարմ ձուկ · Իսկական կրակ · Պրեմիում խորոված</p>
+                <h1 class="hero__title">
+                    Ծովից.<br>
+                    <span class="hero__title-accent">Դեպի կրակ.</span>
+                </h1>
+                <p class="hero__subtitle">
+                    Խրթխրթան կեղև, հյութալի միս և ծխի բույր՝ ուղիղ կրակից
+                    Ձեր սեղանին։ Դեռ շիշող, դեռ տաք։
+                </p>
+                <div class="hero__actions">
+                    <a class="button button--primary" href="#menu">Թարմ ձուկ</a>
+                    <a class="button button--ghost" href="#menu">Խորոված</a>
+                </div>
+                <ul class="hero__stats">
+                    <li class="hero__stat">Թարմ տեսականի</li>
+                    <li class="hero__stat">Պատրաստվում է կրակի վրա</li>
+                    <li class="hero__stat">📍 Առաքում՝ միայն Վանաձորում</li>
+                </ul>
+            </div>
+            <a class="hero__scroll" href="#categories" aria-label="Ոլորել դեպի բովանդակություն">
+                <span></span>
+            </a>
+        </section>
+
+        <section class="categories" id="categories">
+            <div class="container">
+                <div class="category-grid">
+                    <a class="category-card category-card--wide" href="#menu">
+                        <img class="category-card__image" src="{% static 'products/images/categories/fresh-fish.webp' %}" alt="Թարմ ձուկ սառույցի վրա" loading="lazy">
+                        <div class="category-card__overlay"></div>
+                        <div class="category-card__content">
+                            <h2>Թարմ ձուկ</h2>
+                            <p>Փայլուն, առաձգական, օրվա մեջ բռնված թարմությամբ։</p>
+                            <span class="category-card__link">Դիտել <span aria-hidden="true">→</span></span>
+                        </div>
+                    </a>
+                    <a class="category-card" href="#menu">
+                        <img class="category-card__image" src="{% static 'products/images/categories/bbq-essentials.webp' %}" alt="Խորովածի գործիքներ և կրակ" loading="lazy">
+                        <div class="category-card__overlay"></div>
+                        <div class="category-card__content">
+                            <h2>Խորովածի պարագաներ</h2>
+                            <p>Ամեն ինչ, որ պետք է իսկական կրակի համար։</p>
+                            <span class="category-card__link">Դիտել <span aria-hidden="true">→</span></span>
+                        </div>
+                    </a>
+                    <a class="category-card" href="#menu">
+                        <img class="category-card__image" src="{% static 'products/images/categories/ready-to-grill.webp' %}" alt="Ձուկ՝ պատրաստ խորովածի" loading="lazy">
+                        <div class="category-card__overlay"></div>
+                        <div class="category-card__content">
+                            <h2>Պատրաստ խորովածի</h2>
+                            <p>Համեմված, մաքրված և պատրաստ ուղիղ կրակին դնելու։</p>
+                            <span class="category-card__link">Դիտել <span aria-hidden="true">→</span></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <div class="section-heading section-heading--dark">
+                    <p class="section-heading__eyebrow">Ախորժակ բացող պահ</p>
+                    <h2>Մեծ պատկերներ. իրական համ։</h2>
+                </div>
+                <div class="gallery__mosaic">
+                    <div class="gallery__tile gallery__tile--wide">
+                        <img src="{% static 'products/images/gallery/gallery-1.webp' %}" alt="Խորոված ձուկ՝ մատուցված սեղանին" loading="lazy">
+                        <div class="gallery__tile-overlay"></div>
+                        <p class="gallery__tile-caption">Տաք։ Խրթխրթան։ Ոսկեգույն։</p>
+                    </div>
+                    <div class="gallery__tile">
+                        <img src="{% static 'products/images/gallery/gallery-2.webp' %}" alt="Գեղեցիկ մատուցված խորոված ձուկ" loading="lazy">
+                        <div class="gallery__tile-overlay"></div>
+                        <p class="gallery__tile-caption">Հենց նոր՝ կրակից</p>
+                    </div>
+                    <div class="gallery__tile">
+                        <img src="{% static 'products/images/gallery/gallery-3.webp' %}" alt="Ձուկ՝ խոտաբույսերով գրիլի վրա" loading="lazy">
+                        <div class="gallery__tile-overlay"></div>
+                        <p class="gallery__tile-caption">Կիտրոն, կանաչի, բույր</p>
+                    </div>
+                    <div class="gallery__tile">
+                        <img src="{% static 'products/images/gallery/gallery-4.webp' %}" alt="Խորոված ձուկը կրակի մոտ պատրաստելիս" loading="lazy">
+                        <div class="gallery__tile-overlay"></div>
+                        <p class="gallery__tile-caption">Ծուխ ու կրակի ջերմություն</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products" id="menu">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-heading__eyebrow">Մենյու</p>
+                    <h2>Այսօրվա մենյուն</h2>
+                    <p class="section-heading__subtitle">Խրթխրթան կեղևով, հյութալի միջուկով, դեռ շոգեվառվող՝ ուղիղ կրակից Ձեր սեղանին։</p>
+                </div>
+
+                <div class="product-grid">
+                    {% for product in products %}
+                        <article class="product-card" style="--card-index: {{ forloop.counter0 }}">
+                            <div class="product-card__media">
+                                {% if product.image %}
+                                    <img class="product-card__image" src="{{ product.image.url }}" alt="{{ product.display_name|default:product.name }}" loading="lazy">
+                                {% else %}
+                                    <div class="product-card__image product-card__image--placeholder" aria-hidden="true">🐟</div>
+                                {% endif %}
+                                <span class="product-card__ribbon">🔥 Թարմ այսօր</span>
+                            </div>
+                            <div class="product-card__body">
+                                <div class="product-card__heading">
+                                    <h3 class="product-card__name">{{ product.display_name|default:product.name }}</h3>
+                                    <p class="product-card__price">{{ product.effective_price|format_thousands }} ֏</p>
+                                </div>
+                                {% if product.description %}
+                                    <p class="product-card__description">{{ product.description }}</p>
+                                {% endif %}
+                                <div class="product-card__order" data-product-id="{{ product.id }}">
+                                    <button class="product-card__action" type="button" data-role="add">
+                                        🛒 Պատվիրել
+                                    </button>
+                                    <div class="product-card__stepper" data-role="stepper" hidden>
+                                        <button class="stepper__btn" type="button" data-action="decrease" aria-label="Նվազեցնել քանակը">−</button>
+                                        <span class="stepper__value" data-role="quantity">1</span>
+                                        <button class="stepper__btn" type="button" data-action="increase" aria-label="Ավելացնել քանակը">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    {% empty %}
+                        <p class="empty-state">
+                            <span class="empty-state__icon" aria-hidden="true">🔥</span>
+                            Առայժմ հասանելի ապրանքներ չկան։
+                        </p>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="trust" id="trust">
+            <div class="container">
+                <div class="trust-grid">
+                    <article class="trust-item">
+                        <span class="trust-item__index">01</span>
+                        <h3>Օրական թարմություն</h3>
+                        <p>Ձուկը գնում ենք հենց օրվա մեջ, ոչ մի օր ավել։</p>
+                    </article>
+                    <article class="trust-item">
+                        <span class="trust-item__index">02</span>
+                        <h3>Կրակի ջերմություն</h3>
+                        <p>Ամեն ուտեստ եփվում է բաց կրակի վրա, ոչ թե ջեռոցում։</p>
+                    </article>
+                    <article class="trust-item">
+                        <span class="trust-item__index">03</span>
+                        <h3>Համեմված ու պատրաստ</h3>
+                        <p>Ընտրում ես, մենք համեմում ու խորովում ենք ուղիղ Ձեզ համար։</p>
+                    </article>
+                    <article class="trust-item">
+                        <span class="trust-item__index">04</span>
+                        <h3>Արագ ու տաք հասցվում</h3>
+                        <p>Պատվերից մինչև դուռ՝ դեռ շոգեվառվող ուտեստով։</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="journey" id="journey">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-heading__eyebrow">Ինչպես ենք աշխատում</p>
+                    <h2>Ընտրությունից → կրակին → սեղանին</h2>
+                    <p class="section-heading__subtitle">Երեք քայլ, որոնք բացատրում են, թե ինչու է համը տարբեր։</p>
+                </div>
+                <div class="journey__rail">
+                    <article class="journey__card">
+                        <img src="{% static 'products/images/journey/journey-1.webp' %}" alt="Ընտրված թարմ ձուկ՝ պատրաստ խորովածի" loading="lazy">
+                        <div class="journey__card-overlay"></div>
+                        <div class="journey__card-copy">
+                            <span class="journey__card-index">01 · ԸՆՏՐՈՒԹՅՈՒՆ</span>
+                            <h3>Միայն ուշադիր ընտրված մթերք</h3>
+                            <p>Ամեն ուտեստ սկսվում է թարմությունից. մենք ընտրում ենք միայն այն, ինչին վստահում ենք։</p>
+                        </div>
+                    </article>
+                    <article class="journey__card">
+                        <img src="{% static 'products/images/journey/journey-2.webp' %}" alt="Ձուկ՝ համեմունքներով պատրաստվելուց առաջ" loading="lazy">
+                        <div class="journey__card-overlay"></div>
+                        <div class="journey__card-copy">
+                            <span class="journey__card-index">02 · ՊԱՏՐԱՍՏՈՒՄ</span>
+                            <h3>Պարզ բաղադրատոմս, ճշգրիտ կատարում</h3>
+                            <p>Կիտրոն, կանաչի և ժամանակ, որին արժե սպասել՝ առանց ավելորդ բարդության։</p>
+                        </div>
+                    </article>
+                    <article class="journey__card">
+                        <img src="{% static 'products/images/sections/grill-story.webp' %}" alt="Ամբողջական խորոված ձուկ՝ ծխացող կրակի վրա" loading="lazy">
+                        <div class="journey__card-overlay"></div>
+                        <div class="journey__card-copy">
+                            <span class="journey__card-index">03 · ԿՐԱԿ</span>
+                            <h3>Հետո գալիս է բաց կրակը</h3>
+                            <p>Այնտեղ, որտեղ ամեն ինչ միանում է ծխի ու ջերմության մեջ՝ մինչև ձեր ափսեին հասնելը։</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="craft">
+            <div class="container craft__inner">
+                <div class="craft__media">
+                    <img src="{% static 'products/images/chef/chef-spotlight.webp' %}" alt="Խորոված ձուկը կրակի մոտ պատրաստելիս" loading="lazy">
+                </div>
+                <div class="craft__content">
+                    <p class="section-heading__eyebrow">Կրակի վարպետությունը</p>
+                    <h2>Համը սկսվում է<br>այն ձեռքերից,<br><span>ովքեր պատրաստում են։</span></h2>
+                    <p>
+                        Մեր վարպետները գիտեն ամեն ուտեստի ճիշտ ժամանակն ու ջերմությունը՝
+                        որպեսզի ամեն մատուցում լինի նույնքան ճշգրիտ, որքան առաջինը։
+                    </p>
+                    <div class="craft__tags">
+                        <span>🔥 Բաց կրակ</span>
+                        <span>🍋 Կիտրոն</span>
+                        <span>🌿 Թարմ կանաչի</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story">
+            <div class="container story__inner">
+                <div class="story__media">
+                    <img src="{% static 'products/images/sections/grill-story.webp' %}" alt="Ամբողջական խորոված ձուկ՝ ծխացող կրակի վրա" loading="lazy">
+                </div>
+                <div class="story__content">
+                    <h2>Լավ ձուկը<br>արժանի է<br><span>իսկական կրակի։</span></h2>
+                    <p>
+                        Մենք հավատում ենք, որ լավագույն համը ծնվում է պարզությունից՝
+                        թարմ ձուկ, բաց կրակ և ժամանակ, որին արժե սպասել։
+                    </p>
+                    <a class="text-link" href="#menu">Բացահայտել խորովածի ընտրանին <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="breaker">
+            <img class="breaker__image" src="{% static 'products/images/sections/seafood-fire.webp' %}" alt="Խորոված ձուկ՝ կրակի և ծխի մեջ" loading="lazy">
+            <div class="breaker__overlay"></div>
+            <p class="breaker__statement">Թարմ.<br>Պարզ.<br>Իսկական կրակով.</p>
+        </section>
+
+        <section class="delivery-notice">
+            <div class="container delivery-notice__inner">
+                <div class="delivery-notice__main">
+                    <p class="section-heading__eyebrow">📍 Առաքում՝ միայն Վանաձորում</p>
+                    <h2>Վանաձոր (նախկին Կիրովական)</h2>
+                    <p>Ապրանքը → քանակը → հասցեն → հաստատում. պատվերի ձևում նշեք Ձեր Վանաձորի հասցեն, և մենք կհասցնենք այն մինչև Ձեր դուռը՝ դեռ տաք։</p>
+                    <a class="button button--primary" href="#menu">Անցնել մենյուին</a>
+                </div>
+                <div class="delivery-notice__aside">
+                    <h3>⚠️ Կարևոր</h3>
+                    <p>Առաքումը հասանելի է միայն Վանաձոր քաղաքում։ Հասցեում պետք է նշված լինի «Վանաձոր» (կամ «Կիրովական»), հակառակ դեպքում պատվերը հաստատել հնարավոր չի լինի։</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="promo">
+            <div class="container promo__inner">
+                <div class="promo__content">
+                    <p class="section-heading__eyebrow">Քաղցած ես, ուրեմն…</p>
+                    <h2>Այս պահին ինչ-որ մեկը արդեն վայելում է սա</h2>
+                    <p>Խրթխրթան կեղև, հյութալի միս, կիտրոնի ու կրակի բույր։ Մի սպասիր՝ պատվիրիր հիմա, մինչև ամեն ինչ դեռ շոգեվառվում է։</p>
+                    <a class="button button--primary" href="#menu">🔥 Պատվիրել հիմա</a>
+                </div>
+                <div class="promo__media">
+                    <img src="{% static 'products/images/sections/weekend-grill.webp' %}" alt="Խորոված ձուկ՝ պատրաստ մատուցման" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-footer__inner">
+            <div class="site-footer__brand">
+                <a class="brand" href="#top">
+                    <span class="brand__mark" aria-hidden="true">🔥</span>
+                    <span class="brand__name">Ծովից&nbsp;Կրակ</span>
+                </a>
+                <p>Թարմ ձուկ. Պրեմիում խորոված. Իսկական համ։</p>
+            </div>
+
+            <div class="site-footer__column">
+                <h4>Ապրանքներ</h4>
+                <a href="#menu">Թարմ ձուկ</a>
+                <a href="#menu">Խորոված</a>
+                <a href="#menu">Պատրաստ խորովածի</a>
+            </div>
+
+            <div class="site-footer__column">
+                <h4>Ընկերություն</h4>
+                <a href="#trust">Մեր մասին</a>
+                <a href="#menu">Մենյու</a>
+            </div>
+        </div>
+        <div class="container site-footer__bottom">
+            <p>© {% now "Y" %} Ծովից Կրակ</p>
+        </div>
+    </footer>
+
+    <button type="button" class="order-button" id="order-button" aria-haspopup="dialog" aria-controls="order-modal">
+        <span aria-hidden="true">🛒</span>
+        <span>Պատվիրել</span>
+        <span class="order-button__count" id="order-button-count" {% if not basket_summary.count %}hidden{% endif %}>({{ basket_summary.count }})</span>
+    </button>
+
+    <div class="order-modal" id="order-modal" role="dialog" aria-modal="true" aria-labelledby="order-modal-title" {% if not open_order_modal %}hidden{% endif %}>
+        <div class="order-modal__backdrop" data-role="close"></div>
+        <div class="order-modal__panel">
+            <button type="button" class="order-modal__close" data-role="close" aria-label="Փակել">×</button>
+            <h2 id="order-modal-title" class="order-modal__title">Ձեր պատվերը</h2>
+
+            <div class="order-modal__items" id="order-modal-items"></div>
+            <p class="order-modal__empty" id="order-modal-empty" hidden>Ձեր զամբյուղը դատարկ է։</p>
+
+            <div class="order-modal__total">
+                <span>Ընդհանուր՝</span>
+                <span id="order-modal-total">0 ֏</span>
+            </div>
+
+            <form method="post" action="{% url 'orders:checkout' %}" class="order-form" id="order-form">
+                {% csrf_token %}
+
+                {% for error in customer_form.non_field_errors %}
+                    <p class="order-form__error order-form__error--general">{{ error }}</p>
+                {% endfor %}
+
+                <div class="order-form__field">
+                    {{ customer_form.customer_name.label_tag }}
+                    {{ customer_form.customer_name }}
+                    {% for error in customer_form.customer_name.errors %}
+                        <p class="order-form__error">{{ error }}</p>
+                    {% endfor %}
+                </div>
+                <div class="order-form__field">
+                    {{ customer_form.phone.label_tag }}
+                    {{ customer_form.phone }}
+                    {% for error in customer_form.phone.errors %}
+                        <p class="order-form__error">{{ error }}</p>
+                    {% endfor %}
+                </div>
+                <div class="order-form__field">
+                    {{ customer_form.address.label_tag }}
+                    <div class="order-form__input-with-action">
+                        {{ customer_form.address }}
+                        <button
+                            type="button"
+                            class="order-form__location-button"
+                            id="address-location-button"
+                            aria-label="Գտնել իմ գտնվելու վայրը"
+                            title="Գտնել իմ գտնվելու վայրը"
+                            aria-describedby="address-location-status"
+                        >
+                            <span aria-hidden="true">⌖</span>
+                        </button>
+                    </div>
+                    <p class="order-form__location-status" id="address-location-status" role="status" aria-live="polite" hidden></p>
+                    {% for error in customer_form.address.errors %}
+                        <p class="order-form__error">{{ error }}</p>
+                    {% endfor %}
+                </div>
+                <div class="order-form__field">
+                    {{ customer_form.comment.label_tag }}
+                    {{ customer_form.comment }}
+                </div>
+
+                <p class="order-form__notice">
+                    Պատվերը հաստատելուց հետո մեր մասնագետը հնարավորինս շուտ կապ կհաստատի Ձեզ հետ՝ պատվերը հաստատելու համար։
+                </p>
+
+                <button type="submit" class="button button--primary order-form__submit" id="order-form-submit">
+                    Հաստատել պատվերը
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="order-modal order-success-modal" id="order-success-modal" role="dialog" aria-modal="true" aria-labelledby="order-success-modal-title" {% if not order_success %}hidden{% endif %}>
+        <div class="order-modal__backdrop" data-role="close"></div>
+        <div class="order-modal__panel">
+            <button type="button" class="order-modal__close" data-role="close" aria-label="Փակել">×</button>
+            <h2 id="order-success-modal-title" class="order-modal__title">Պատվերն ընդունված է</h2>
+            <p class="order-modal__notice">
+                Շնորհակալություն։ Ձեր պատվերն ընդունված է, մեր մասնագետը շուտով կապ կհաստատի Ձեզ հետ։
+            </p>
+        </div>
+    </div>
+
+    {{ basket_summary|json_script:"basket-data" }}
+
+    <script src="{% static 'products/index.js' %}" defer></script>
+    <script src="{% static 'products/orders.js' %}" defer></script>
+</body>
+</html>

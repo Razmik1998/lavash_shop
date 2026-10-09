@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+db.sqlite3
+media/
+staticfiles/
+.env
+.git/
+.gitignore
+deploy/certs/

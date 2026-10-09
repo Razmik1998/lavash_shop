@@ -1,0 +1,5 @@
+FishShop
+
+No license terms have been finalized for this software yet. This placeholder
+file exists so the Inno Setup installer's license page is wired up and can be
+replaced with real license text before a production release.

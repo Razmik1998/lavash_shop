@@ -1,0 +1,55 @@
+2026-10-03 23:20:34,632 ERROR main admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-03 23:56:53,671 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-04 00:00:37,919 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-04 00:09:04,169 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-04 00:15:41,942 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-04 00:17:05,055 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-04 00:25:36,731 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-05 00:00:58,754 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-05 01:15:33,523 ERROR ui.home_window home_window op=print_closeout outcome=failed
+Traceback (most recent call last):
+  File "/Users/admin/Desktop/apps/shop_app/apps/pos/src/ui/home_window.py", line 477, in _print_closeout_report
+    printer.print_closeout_report(report)
+  File "/Users/admin/Desktop/apps/shop_app/apps/pos/src/printing/thermal.py", line 502, in print_closeout_report
+    return self._print_payload(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/Desktop/apps/shop_app/apps/pos/src/printing/thermal.py", line 513, in _print_payload
+    raise ThermalPrinterError(
+printing.thermal.ThermalPrinterError: Windows RAW printing is available only in the Windows POS app.
+2026-10-05 01:39:56,487 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-05 23:10:05,663 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-05 23:25:23,647 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-05 23:33:58,432 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-05 23:34:03,267 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-05 23:57:18,722 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-06 00:01:52,903 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-06 00:11:15,350 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-06 00:35:42,061 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-06 00:45:46,867 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-06 01:13:24,176 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-06 01:13:55,030 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-07 00:16:58,342 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-08 02:48:43,620 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-09 01:04:29,105 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-09 01:04:38,440 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-09 01:10:52,955 ERROR __main__ admin_host=127.0.0.1 admin_port=8765 outcome=unavailable
+2026-10-09 01:27:30,287 ERROR ui.home_window home_window op=print_closeout outcome=failed
+Traceback (most recent call last):
+  File "/Users/admin/Desktop/apps/shop_app/apps/pos/src/ui/home_window.py", line 569, in _print_closeout_report
+    printer.print_closeout_report(report)
+  File "/Users/admin/Desktop/apps/shop_app/apps/pos/src/printing/thermal.py", line 524, in print_closeout_report
+    return self._print_payload(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/Desktop/apps/shop_app/apps/pos/src/printing/thermal.py", line 535, in _print_payload
+    raise ThermalPrinterError(
+printing.thermal.ThermalPrinterError: Windows RAW printing is available only in the Windows POS app.
+2026-10-09 01:31:31,160 ERROR ui.home_window home_window op=print_closeout outcome=failed
+Traceback (most recent call last):
+  File "/Users/admin/Desktop/apps/shop_app/apps/pos/src/ui/home_window.py", line 539, in _print_closeout_report
+    printer.print_closeout_report(report)
+  File "/Users/admin/Desktop/apps/shop_app/apps/pos/src/printing/thermal.py", line 524, in print_closeout_report
+    return self._print_payload(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/admin/Desktop/apps/shop_app/apps/pos/src/printing/thermal.py", line 535, in _print_payload
+    raise ThermalPrinterError(
+printing.thermal.ThermalPrinterError: Windows RAW printing is available only in the Windows POS app.
